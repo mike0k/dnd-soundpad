@@ -1,0 +1,44 @@
+@mixin bg-image($name, $size:cover, $posX:center, $posY:center)
+  background-color: transparent
+  background-image: url("#{$im-dir}#{$name}")
+  background-repeat: no-repeat
+  background-position: $posX $posY
+  background-size: $size
+
+@mixin fill()
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+@mixin flexed($posX:center, $posY:center)
+  display: flex
+  justify-content: $posX
+  align-items: $posY
+
+@mixin aspect-ratio2($width, $height)
+  position: relative
+  &:before
+    display: block
+    content: ""
+    width: 100%
+    padding-top: ($height / $width) * 100%
+  > .aspectContent
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+@mixin aspect-ratio($ratio-or-width, $height: null)
+  $padding: if($height, percentage($height/$ratio-or-width), percentage(1/$ratio-or-width))
+  &:before
+    content: ''
+    float: left
+    padding-bottom: $padding
+  &:after
+    content: ''
+    display: table
+    clear: both
+

@@ -1,0 +1,32 @@
+{
+    "name": "animite/crm-js",
+    "description": "Animite Property",
+    "homepage": "https://www.animitemedia.com/",
+    "license": "CC",
+    "authors": [
+        {
+            "name": "Michael Kirkbright",
+            "email": "michael@animitemedia.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "devgroup/yii2-http2-server-push": "^1.0",
+        "ext-curl": "*",
+        "himiklab/yii2-recaptcha-widget": "^1.2",
+        "pelago/emogrifier": "^1.2",
+        "yiisoft/yii2": "^2.0",
+        "yiisoft/yii2-bootstrap": "^2.0",
+        "yiisoft/yii2-bootstrap4": "^2.0",
+        "yiisoft/yii2-swiftmailer": "^2.0",
+        "google/apiclient": "^2.7"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0",
+        "yiisoft/yii2-gii": "~2.0",
+        "fzaninotto/faker": "^1.8"
+    },
+    "config": {
+        "process-timeout": 1800
+    }
+}

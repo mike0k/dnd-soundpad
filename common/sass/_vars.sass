@@ -1,0 +1,132 @@
+/////////////////////////////////////////
+// COLOURS
+@import "utils/color"
+
+$cp-blk: #000000
+$cp-wht: #ffffff
+
+$cp-blk-dk: $cm-grey-900
+$cp-blk-md: $cm-grey-800
+$cp-blk-li: $cm-grey-700
+
+$cp-nvy-dk: $cm-blue-grey-900
+$cp-nvy-md: $cm-blue-grey-800
+$cp-nvy-li: $cm-blue-grey-700
+
+$cp-gry-dk: #747474
+$cp-gry-md: #B4B4B4
+$cp-gry-li: #DADADA
+
+$cp-wht-dk: $cm-grey-300
+$cp-wht-md: $cm-grey-200
+$cp-wht-li: $cm-grey-100
+
+$cp-pri-dk: $cm-grey-700
+$cp-pri-md: $cm-grey-600
+$cp-pri-li: $cm-grey-500
+
+$cp-acc-dk: $cm-teal-700
+$cp-acc-md: $cm-teal-600
+$cp-acc-li: $cm-teal-500
+
+$cp-dan-dk: $cm-red-700
+$cp-dan-md: $cm-red-600
+$cp-dan-li: $cm-red-500
+
+$cp-suc-dk: $cm-purple-700
+$cp-suc-md: $cm-purple-600
+$cp-suc-li: $cm-purple-500
+
+$cp-inf-dk: $cm-cyan-700
+$cp-inf-md: $cm-cyan-600
+$cp-inf-li: $cm-cyan-500
+
+$cp-war-dk: $cm-purple-700
+$cp-war-md: $cm-purple-600
+$cp-war-li: $cm-purple-500
+
+/////////////////////////////////////////
+// FONTS - FAMILY
+
+$ff-pri: 'Dosis', sans-serif
+$ff-sec: 'Raleway', sans-serif
+$ff-logo: 'Raleway', sans-serif
+$ff-mono: 'Lucida Console', Monaco, monospace
+
+
+/////////////////////////////////////////
+// FONTS - SIZE
+
+$fs-xxxs: 0.625rem
+$fs-xxs: 0.625rem
+$fs-xs: 0.75rem
+$fs-sm: 0.875rem
+$fs-md: 1rem
+$fs-lg: 1.125rem
+$fs-xl: 1.5rem
+$fs-xxl: 1.75rem
+$fs-xxxl: 2rem
+$fs-hg: 2.5rem
+$fs-xh: 3.75rem
+
+/////////////////////////////////////////
+// FONTS - Weight
+
+$fw-xd: 700
+$fw-dk: 700
+$fw-md: 400
+$fw-li: 200
+$fw-xl: 200
+
+/////////////////////////////////////////
+// MEDIA QUERIES
+
+$m-screen: "only screen"
+
+$m-xxs-min: "(min-width:none)"
+$m-xxs-max: "(max-width: 480px)"
+$m-xxs: "(max-width:480px)"
+
+$m-xs-min: "(min-width:none)"
+$m-xs-max: "(max-width: 767px)"
+$m-xs: "(max-width:767px)"
+
+$m-sm-min: "(min-width:768px)"
+$m-sm-max: "(max-width:991px)"
+$m-sm: "(min-width:768px) and (max-width:991px)"
+
+$m-md-min: "(min-width:992px)"
+$m-md-max: "(max-width:1199px)"
+$m-md: "(min-width:992px) and (max-width:1199px)"
+
+$m-lg-min: "(min-width:1200px)"
+$m-lg-max: "(max-width:none)"
+$m-lg: "(min-width:1200px)"
+
+/////////////////////////////////////////
+// IMAGES
+//e.g. background-image: url("#{$im-dir}logo.jpg")
+
+$im-dir: '../img/'
+
+/////////////////////////////////////////
+// LISTS
+
+$wi-site: 1170px
+$margin-list: 0 5 10 15 20 30 50 100 150 200
+
+$color-name-list: accent, danger, info, primary, success, warning, 'white', 'black'
+$color-ref-list-li: $cp-acc-li, $cp-dan-li, $cp-inf-li, $cp-pri-li, $cp-suc-li, $cp-war-li, $cp-wht-li, $cp-nvy-li
+$color-ref-list-md: $cp-acc-md, $cp-dan-md, $cp-inf-md, $cp-pri-md, $cp-suc-md, $cp-war-md, $cp-wht-md, $cp-nvy-md
+$color-ref-list-dk: $cp-acc-dk, $cp-dan-dk, $cp-inf-dk, $cp-pri-dk, $cp-suc-dk, $cp-war-dk, $cp-wht-dk, $cp-nvy-dk
+
+$heading-list-size: $fs-xh $fs-hg $fs-xxxl $fs-xxl $fs-xl $fs-lg $fs-md $fs-sm $fs-xs
+$heading-list-ref: t-xh t-hg t-xxxl t-xxl t-xl t-lg t-md t-sm t-xs
+
+$media-list-size: $m-xs $m-sm $m-md $m-lg
+$media-list-ref: xs sm md lg xl
+
+/////////////////////////////////////////
+// MIXIN
+@import "_func"
+@import "_mixin"

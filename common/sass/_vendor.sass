@@ -1,0 +1,83 @@
+////////////////////////////////////////////////
+// BOOTSTRAP
+////////////////////////////////////////////////
+
+.form-control
+  color: #999
+  @include transition(all 0.5s ease)
+  &:hover, &:focus
+    color: $cp-blk-li
+    background-color: #e6e6e6
+  &:focus
+    color: $cp-blk-md
+p.form-control
+  margin: 0
+  background-color: #e6e6e6
+  cursor: not-allowed
+
+.input-group-btn .btn
+  padding: 7px 12px
+
+
+.text-left
+  text-align: left !important
+.text-center
+  text-align: center !important
+.text-right
+  text-align: right !important
+.text-justify
+  text-align: justify !important
+
+////////////////////////////////////////////////
+// HOVER BUTTON EFFECTS
+// https://github.com/IanLunn/Hover
+////////////////////////////////////////////////
+.hvr-sweep-to-right
+  display: inline-block
+  vertical-align: middle
+  -webkit-transform: perspective(1px) translateZ(0)
+  transform: perspective(1px) translateZ(0)
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+  position: relative
+  -webkit-transition-property: color
+  transition-property: color
+  -webkit-transition-duration: 0.3s
+  transition-duration: 0.3s
+  &:before
+    content: ""
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    -webkit-transform: scaleX(0)
+    transform: scaleX(0)
+    -webkit-transform-origin: 0 50%
+    transform-origin: 0 50%
+    -webkit-transition-property: transform
+    transition-property: transform
+    -webkit-transition-duration: 0.3s
+    transition-duration: 0.3s
+    -webkit-transition-timing-function: ease-out
+    transition-timing-function: ease-out
+  &:hover:before, &:focus:before, &:active:before
+    -webkit-transform: scaleX(1)
+    transform: scaleX(1)
+
+////////////////////////////////////////////////
+// GOOGLE RE-CAPTCHA
+////////////////////////////////////////////////
+
+.captcha-center
+  overflow: hidden
+  .g-recaptcha
+    width: 304px
+    margin: 0 auto
+
+////////////////////////////////////////////////
+// YII
+////////////////////////////////////////////////
+
+.help-block-error
+  margin: 0

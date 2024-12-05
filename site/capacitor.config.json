@@ -1,0 +1,8 @@
+{
+    "appId": "io.ionic.life",
+    "appName": "Life",
+    "bundledWebRuntime": false,
+    "npmClient": "npm",
+    "webDir": "build",
+    "cordova": {}
+}

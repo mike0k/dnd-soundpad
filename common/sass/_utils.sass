@@ -1,0 +1,363 @@
+////////////////////////////////////////////////
+// ALERT
+////////////////////////////////////////////////
+
+@for $i from 1 through length($color-name-list)
+  $group: nth($color-name-list, $i)
+  $dk: nth($color-ref-list-dk, $i)
+  .alert-#{$group}
+    background-color: $dk
+    border-color: $dk
+    color: $cp-wht-li
+
+////////////////////////////////////////////////
+// BADGE
+////////////////////////////////////////////////
+
+.badge
+  font-size: $fs-sm
+  font-weight: $fw-li
+
+@for $i from 1 through length($color-name-list)
+  $group: nth($color-name-list, $i)
+  $dk: nth($color-ref-list-dk, $i)
+  .badge-#{$group}
+    background-color: rgba($dk, 0.8)
+
+
+////////////////////////////////////////////////
+// BUTTON
+////////////////////////////////////////////////
+
+.btn
+  align-items: center
+  border: 0
+  border-radius: 0
+  box-shadow: 0px 1px 5px 0px rgba($cp-blk,0.2), 0px 2px 2px 0px rgba($cp-blk,0.14), 0px 3px 1px -2px rgba($cp-blk,0.12)
+  box-sizing: border-box
+  cursor: pointer
+  display: inline-flex
+  font-family: $ff-sec
+  font-size: $fs-md
+  font-weight: $fw-dk
+  line-height: 1.75
+  justify-content: center
+  margin: 0
+  min-width: 64px
+  outline: none !important
+  padding: 5px 30px
+  position: relative
+  text-align: center
+  text-decoration: none
+  text-shadow: none
+  text-transform: capitalize
+  vertical-align: middle
+  @include transition(all 0.5s ease)
+  &:hover, &:focus
+    //color: $cp-wht
+  &.btn-round
+    border-radius: 50px
+  &.btn-sm
+    font-size: $fs-sm !important
+    padding: 4px 8px !important
+  &.btn-lg
+    font-size: $fs-xl !important
+    padding: 10px 30px
+  &.btn-hg
+    font-size: $fs-xxl !important
+    padding: 15px 50px
+
+@for $i from 1 through length($color-name-list)
+  $group: nth($color-name-list, $i)
+  $li: nth($color-ref-list-li, $i)
+  $md: nth($color-ref-list-md, $i)
+  $dk: nth($color-ref-list-dk, $i)
+  .btn-#{$group}
+    @if $group == 'white'
+      background-color: $cp-wht
+      border-color: $cp-pri-dk
+      color: $cp-pri-dk
+    @else
+      background-color: $md
+      border-color: $md
+      color: $cp-wht
+    &:hover, &:focus
+      @if $group == 'white'
+        background-color: $cp-acc-md
+        border-color: $cp-acc-md
+        color: $cp-wht
+      @else if $group == 'black'
+        background-color: $cp-acc-md
+        border-color: $cp-acc-md
+      @else
+        background-color: $dk
+        border-color: $dk
+    &.hvr-sweep-to-right
+      &:before
+        background-color: $dk
+        border-color: $dk
+      &:hover, &:focus
+        background-color: $md
+        border-color: $md
+
+////////////////////////////////////////////////
+// CARDS
+////////////////////////////////////////////////
+
+.card
+  border: none
+  padding: 1.5rem
+  border-radius: 0
+
+@for $i from 1 through length($color-name-list)
+  $group: nth($color-name-list, $i)
+  $md: nth($color-ref-list-md, $i)
+  $dk: nth($color-ref-list-dk, $i)
+  .card-#{$group}
+    @if $group == 'white'
+      background-color: $dk
+    @else
+      color: $cp-wht-li
+      background-color: $dk
+
+////////////////////////////////////////////////
+// IMAGE
+////////////////////////////////////////////////
+.img-wrap
+  display: inline-block
+  overflow: hidden
+  &.img-circle
+    border-radius: 50%
+  &.img-team
+    border-radius: 50%
+
+////////////////////////////////////////////////
+// LIST GROUP
+////////////////////////////////////////////////
+.list-group-item
+  padding: 8px 10px
+@for $i from 1 through length($color-name-list)
+  $group: nth($color-name-list, $i)
+  $dk: nth($color-ref-list-dk, $i)
+  $md: nth($color-ref-list-md, $i)
+  $li: nth($color-ref-list-li, $i)
+  .list-group-item-#{$group}
+    background-color: $dk
+    border-color: $md
+    color: $cp-wht-li
+
+////////////////////////////////////////////////
+// OVERLAY
+////////////////////////////////////////////////
+
+.page-overlay
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 220px
+  background-color: $cp-wht-md
+  z-index: 2000
+  .page-overlay-content
+    padding: 50px
+  .page-overlay-close
+    position: absolute
+    font-size: $fs-xl
+    top: 15px
+    right: 25px
+    &:hover, &:focus
+      color: $cp-dan-md
+
+
+////////////////////////////////////////////////
+// POSITIONING
+////////////////////////////////////////////////
+
+.h-100
+  height: 100%
+.w-100
+  width: 100%
+
+@each $size in $margin-list
+  $i: index($margin-list, $size)
+  .section-#{$size}
+    padding: #{$size}px 0
+  .mt-#{$size}
+    margin-top: #{$size}px !important
+  .mr-#{$size}
+    margin-right: #{$size}px !important
+  .mb-#{$size}
+    margin-bottom: #{$size}px !important
+  .ml-#{$size}
+    margin-left: #{$size}px !important
+  .my-#{$size}
+    margin-top: #{$size}px !important
+    margin-bottom: #{$size}px !important
+  .mx-#{$size}
+    margin-left: #{$size}px !important
+    margin-right: #{$size}px !important
+  .pt-#{$size}
+    padding-top: #{$size}px !important
+  .pr-#{$size}
+    padding-right: #{$size}px !important
+  .pb-#{$size}
+    padding-bottom: #{$size}px !important
+  .pl-#{$size}
+    padding-left: #{$size}px !important
+  .py-#{$size}
+    padding-top: #{$size}px !important
+    padding-bottom: #{$size}px !important
+  .px-#{$size}
+    padding-left: #{$size}px !important
+    padding-right: #{$size}px !important
+
+@for $i from 1 through length($media-list-size)
+  $mediaSize: nth($media-list-size, $i)
+  $ref: nth($media-list-ref, $i)
+  @media #{$mediaSize}
+    @each $size in $margin-list
+      $i: index($margin-list, $size)
+      .mt-#{$size}\-#{$ref}
+        margin-top: #{$size}px
+      .mr-#{$size}\-#{$ref}
+        margin-right: #{$size}px
+      .mb-#{$size}\-#{$ref}
+        margin-bottom: #{$size}px
+      .ml-#{$size}\-#{$ref}
+        margin-left: #{$size}px
+      .my-#{$size}\-#{$ref}
+        margin-top: #{$size}px
+        margin-bottom: #{$size}px
+      .mx-#{$size}\-#{$ref}
+        margin-left: #{$size}px
+        margin-right: #{$size}px
+      .pt-#{$size}\-#{$ref}
+        padding-top: #{$size}px
+      .pr-#{$size}\-#{$ref}
+        padding-right: #{$size}px
+      .pb-#{$size}\-#{$ref}
+        padding-bottom: #{$size}px
+      .pl-#{$size}\-#{$ref}
+        padding-left: #{$size}px
+      .py-#{$size}\-#{$ref}
+        padding-top: #{$size}px
+        padding-bottom: #{$size}px
+      .px-#{$size}\-#{$ref}
+        padding-left: #{$size}px
+        padding-right: #{$size}px
+
+
+////////////////////////////////////////////////
+// PROGRESS BAR
+////////////////////////////////////////////////
+
+.progress-bar
+  box-shadow: none
+
+.progress-small
+  height: 15px
+  margin: 5px 0 0 0
+  .progress-bar
+    height: 15px
+    line-height: 15px
+    font-size: 11px
+    padding: 0 5px
+    text-align: right
+
+.progress-mini
+  height: 5px
+  margin: 5px 0 0 0
+  .progress-bar
+    height: 5px
+    margin-bottom: 0
+
+.progress-multi
+  position: relative
+  .progress-bar
+    position: absolute
+    top: 0
+    left: 0
+
+@for $i from 1 through length($color-name-list)
+  $group: nth($color-name-list, $i)
+  $md: nth($color-ref-list-md, $i)
+  .progress-bar-#{$group}
+    background-color: rgba($md, 0.9)
+
+
+////////////////////////////////////////////////
+// SEPERATOR
+////////////////////////////////////////////////
+
+.sep
+  margin: 20px auto
+  height: 1px
+  width: 100%
+  background-color: transparent
+  border: none
+  border-top: 1px dashed rgba($cp-gry-md, 0.3)
+  &.sep-dk
+    border-top: 1px dashed rgba($cp-nvy-md, 0.3)
+  &.sep-xs
+    width: 20%
+  &.sep-sm
+    width: 40%
+  &.sep-md
+    width: 60%
+  &.sep-lg
+    width: 80%
+
+////////////////////////////////////////////////
+// TEXT
+////////////////////////////////////////////////
+
+.ff-pri
+  font-family: $ff-pri
+.ff-sec
+  font-family: $ff-sec
+
+.fw-li
+  font-weight: $fw-li
+.fw-md
+  font-weight: $fw-md
+.fw-dk
+  font-weight: $fw-dk
+
+.tt-lc
+  text-transform: lowercase
+.tt-uc
+  text-transform: uppercase
+
+.ta-center
+  text-align: center
+.ta-left
+  text-align: left
+.ta-justify
+  text-align: justify
+.ta-right
+  text-align: right
+
+@for $i from 1 through length($heading-list-ref)
+  $size: nth($heading-list-size, $i)
+  $ref: nth($heading-list-ref, $i)
+  .#{$ref}
+    font-size: $size !important
+
+@for $i from 1 through length($color-name-list)
+  $group: nth($color-name-list, $i)
+  $md: nth($color-ref-list-md, $i)
+  .text-#{$group}
+    color: $md !important
+
+@for $i from 1 through length($media-list-size)
+  $mediaSize: nth($media-list-size, $i)
+  $ref: nth($media-list-ref, $i)
+  @media #{$mediaSize}
+    .text-#{$ref}-left
+      text-align: left
+    .text-#{$ref}-right
+      text-align: right
+    .text-#{$ref}-center
+      text-align: center
+    .text-#{$ref}-justify
+      text-align: justify

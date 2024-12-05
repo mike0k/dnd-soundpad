@@ -1,0 +1,20 @@
+{
+    "name": "Life",
+    "short_name": "Life",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png?v=yy4LAKmY2d",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-256x256.png?v=yy4LAKmY2d",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#121212",
+    "background_color": "#121212",
+    "start_url": "https://life.animitemedia.com",
+    "display": "standalone"
+}

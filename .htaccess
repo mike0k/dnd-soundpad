@@ -1,0 +1,34 @@
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+    RewriteEngine On
+
+#    # Force www
+#    RewriteCond %{HTTP_HOST} !^$
+#    RewriteCond %{HTTP_HOST} !^www\. [NC]
+#    #RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+#    RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R]
+#
+#    # Forces https
+#    RewriteCond %{HTTPS} off
+#    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#    #RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R]
+
+
+    # End the processing, if a direction is open to public
+    RewriteRule ^(\.well-known)($|/) - [L]
+
+    # Hide robot.txt
+    RewriteRule ^robots.txt - [L]
+
+    # End the processing, if a rewrite already occurred
+    RewriteRule ^(api)/web/ - [L]
+    RewriteRule ^(site)/build/ - [L]
+
+    # Redirect to subdomain apps
+    RewriteRule ^api(/(.*))?$ api/web/$2 [S=1]
+
+    # Redirect to root app
+    RewriteCond %{HTTP_HOST} !^$
+    RewriteRule .* site/build/$0
+</IfModule>

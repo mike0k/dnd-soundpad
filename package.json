@@ -1,0 +1,24 @@
+{
+    "name": "property-studios-js",
+    "version": "0.1.0",
+    "description": "Property Studios Sites",
+    "author": "Animite Media",
+    "license": "CC",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "create-react-app": "^2.1.8"
+    },
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-cli": "^2.2.0",
+        "gulp-minify-css": "^1.2.4",
+        "gulp-plumber": "^1.2.1",
+        "gulp-rename": "^1.4.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-uglify": "^3.0.2",
+        "node-sass": "^4.13.1"
+    }
+}
